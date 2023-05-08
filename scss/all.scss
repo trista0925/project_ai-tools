@@ -1,0 +1,92 @@
+@import '_reset.scss';
+@import 'variable.scss';
+@import '_mixin.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+  color: $black100;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tools-list { 
+  width: 100%;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 312px;
+    @include md{
+      margin: 0 auto;
+    }
+    @include sm{
+      margin: 0 auto;
+    }
+    @include xs{
+      margin: 0 auto;
+    }
+    li {
+      margin: 12px;
+      width: 416px;
+      border: $black20 1px solid;
+      border-radius: 16px;
+      @include md{
+        width: 45%;
+      }
+      @include sm{
+        width: 45%;
+      }
+      @include xs{
+        width: 100%;
+      }
+      > img{
+        border-radius: 16px 16px 0 0;
+      }
+      h2 {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 120%;
+      padding: 20px 32px 12px 32px;
+      }
+      > p{
+        color: $black80;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        padding: 0 32px 20px 32px;
+        min-height: 70px;
+      }
+      .tools-ai{
+        display: flex;
+        justify-content: space-between;
+        border-top: $black20 1px solid;
+        border-bottom: $black20 1px solid;
+        p{
+          padding: 20px 32px 20px 32px;
+        }
+        p:first-child{
+          font-weight: 700;
+        }
+      }
+      .tools-tag {
+        display: flex;
+        justify-content: space-between;
+        p{
+          padding: 20px 32px 20px 32px;
+        }
+      }
+    }
+  }
+}
+ 
+ 
