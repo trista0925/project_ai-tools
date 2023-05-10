@@ -25,24 +25,32 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
-    @include md{
+    @include lg{
       width: 100%;
     }
     li {
       margin: 12px;
-      width: 416px;
+      width: 30%;
       border: $black20 1px solid;
       border-radius: 16px;
-      @include md{
+      @include lg{
         width: 45%;
       }
       @include xs{
         width: 100%;
       }
-      > img{
+      .tools-img{
         border-radius: 16px 16px 0 0;
+        min-height:30%;
+        overflow: hidden;
+      }
+      .tools-img img{
+        transition: transform .5s ease;
+      }
+      .tools-img img:hover{
+        transform: scale(1.2)
       }
       h2 {
       font-size: 20px;
