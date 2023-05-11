@@ -22,7 +22,7 @@ img {
 .tools-list-container { 
   max-width: 1200px;
   margin: 0 auto;
-  ul {
+  .tools-list-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
