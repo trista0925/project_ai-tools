@@ -405,7 +405,6 @@ h5 {
     &-content{
       display: none;
       z-index: 1;
-      cursor: pointer;
       position: absolute;
       top:70px;
       background: #FFFFFF;
@@ -422,10 +421,12 @@ h5 {
       }
       li{
         position: relative;
-        padding: 4px 40px;
         display: block;
         label{
+          padding: 4px 40px;
+          display: block;
           cursor: pointer;
+          width: 100%;
         }
         &:hover{
           background: $black20;
@@ -465,6 +466,9 @@ h5 {
     }
     .tools-sort-content{
       right: 0;
+      li{
+        padding: 4px 40px;
+      }
     }
     > ul{
       @include mobile{

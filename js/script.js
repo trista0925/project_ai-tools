@@ -13,6 +13,27 @@ $(function () {
     $(".tools-filter-btn").removeClass("border");
   });
 
+  // $(document).on("click", function (event) {
+  //   let $trigger = $(".tools-filter");
+  //   if ($trigger !== event.target && !$trigger.has(event.target).length) {
+  //     $(".tools-filter-content").hide();
+  //   }
+  // });
+
+  $(".tools-filter-content li").click(function () {
+    $(".tools-filter-content").hide();
+    $(".tools-filter-btn").removeClass("border");
+  });
+
+  $(document).on("click", function (event) {
+    if (!$(event.target).closest(".tools-filter").length) {
+      $(".tools-filter-content").hide();
+      $(".tools-sort-content").hide();
+      $(".tools-filter-btn").removeClass("border");
+      $(".tools-sort-btn").removeClass("border");
+    }
+  });
+
   let title = $(".qa-title");
   for (let i = 0; i < title.length; i++) {
     title[i].onclick = function (e) {
