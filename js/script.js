@@ -143,16 +143,14 @@ desc.addEventListener("click", (e) => {
   e.preventDefault();
   data.sort = 0;
   getData(data);
-  btnSort.innerHTML =
-    '由新到舊<span class="material-icons pl-12">expand_more</span>';
+  btnSort.innerHTML = "由新到舊";
 });
 //  由舊到新 -> sort = 1
 asc.addEventListener("click", (e) => {
   e.preventDefault();
   data.sort = 1;
   getData(data);
-  btnSort.innerHTML =
-    '由舊到新<span class="material-icons pl-12">expand_more</span>';
+  btnSort.innerHTML = "由舊到新";
 });
 
 // 切換作品類型
