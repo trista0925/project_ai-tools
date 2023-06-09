@@ -1,4 +1,22 @@
 $(function () {
+  $(".m-menu-open").click(function () {
+    $(".m-header-menu").show();
+  });
+  $(".m-menu-close").click(function () {
+    $(".m-header-menu").hide();
+  });
+
+  const swiper = new Swiper(".swiper", {
+    loop: true, //loop
+    spaceBetween: 12,
+    // autoplay: {
+    //   delay: 2000,
+    // },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
   $(".tools-filter-btn").click(function () {
     $(".tools-filter-content").toggle();
     $(".tools-sort-content").hide();
@@ -82,10 +100,8 @@ function renderWorks() {
 
   worksData.forEach((item) => {
     works += /*html*/ `  <li>
-    <a href="${item.link}" target="_blank">
-      <div class="tools-img">
-        <img src="${item.imageUrl}" alt="Voice Assistant SDK">
-      </div>
+    <a href="${item.link}" target="_blank" class="tools-img">
+      <img src="${item.imageUrl}" alt="${item.title}">
     </a>
     <div class="tools-title">
       <h4>${item.title}</h4>
@@ -144,8 +160,8 @@ function renderPages() {
   if (pagesData.has_next) {
     pageStr += /*html*/ `<li>
     <a class="page-link" href="#">
-    <span class="material-icons">
-      chevron_right
+    <span class="material-symbols-outlined">
+    chevron_right
     </span>
     </a>
     </li>`;
