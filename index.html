@@ -54,12 +54,14 @@
                     <a href="price.html">定價</a>
                 </li>
             </ul>
-            <span>AI工具王 © 2023</span>
-            <ul class="m-footer">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
-            </ul>
+            <div class="m-footer">
+                <span>AI工具王 © 2023</span>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -187,12 +189,12 @@
                     <input type="search" id="search" placeholder="輸入關鍵字搜尋">
                 </div>
                 <div class="tools-filter">
-                    <div class="tools-filter-btn btn">
+                    <button class="tools-filter-btn btn">
                         <span>篩選</span>
                         <span class="material-symbols-outlined">
                             filter_alt
                         </span>
-                    </div>
+                    </button>
                     <div class="tools-filter-content">
                         <ul>
                             <li>
@@ -289,7 +291,7 @@
                             </label>
                         </li>
                     </ul>
-                    <div class="tools-sort-btn btn">
+                    <button class="tools-sort-btn btn">
                         <span id="btn-sort">由新到舊</span>
                         <span class="material-symbols-outlined icon-expand">
                             expand_more
@@ -300,7 +302,7 @@
                                 <li id="asc">由舊到新</li>
                             </ul>
                         </div>
-                    </div>
+                    </button>
                 </div>
                 <ul id="list" class="tools-list"></ul>
                 <ul id="pagination" class="tools-page">
