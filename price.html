@@ -9,22 +9,44 @@
     <link rel="stylesheet" href="css/all.css" class="ref">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-    <section class="container" id="top">
-        <div class="header">
-            <h1>
+    <header class="container" id="top">
+        <h1>
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo">
+                <img src="img/logo-text.png" alt="AI工具王">
+            </a>
+        </h1>
+        <ul class="header-menu">
+            <li>
+                <a href="index.html">首頁</a>
+            </li>
+            <li>
+                <a href="price.html">定價</a>
+            </li>
+        </ul>
+        <span class="material-symbols-outlined m-menu-open">
+            menu
+        </span>
+        <div class="m-header-menu">
+            <div class="m-header-title">
                 <a href="index.html">
                     <img src="img/logo.png" alt="logo">
                     <img src="img/logo-text.png" alt="AI工具王">
                 </a>
-            </h1>
-            <ul class="header-menu">
+                <span class="material-symbols-outlined m-menu-close">
+                    close
+                </span>
+            </div>
+            <ul class="m-content">
                 <li>
                     <a href="index.html">首頁</a>
                 </li>
@@ -32,286 +54,267 @@
                     <a href="price.html">定價</a>
                 </li>
             </ul>
-            <span class="material-symbols-outlined m-menu-open">
-        menu
-      </span>
-            <div class="m-header-menu">
-                <div class="m-header-title">
-                    <a href="index.html">
-                        <img src="img/logo.png" alt="logo">
-                        <img src="img/logo-text.png" alt="AI工具王">
-                    </a>
-                    <span class="material-symbols-outlined m-menu-close">
-            close
-          </span>
+            <span>AI工具王 © 2023</span>
+            <ul class="m-footer">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="banner">
+                <h2>用多少，<br>付多少</h2>
+                <p class="banner-desc">我們相信，最靈活的取用機制，才能最大化的幫助你業務的推動。</p>
+                <div class="banner-icon banner-icon-price">
+                    <img src="img/header-icon.png" alt="motin">
+                    <img src="img/header-icon.png" alt="motin">
+                    <img src="img/header-icon.png" alt="motin">
                 </div>
-                <hr>
+            </div>
+            <div class="price">
+                <h4>定價</h4>
                 <ul>
                     <li>
-                        <a href="index.html">首頁</a>
+                        <div class="price-title">
+                            <h5>琪琪</h5>
+                            <ul>
+                                <li>• 初級</li>
+                                <li>• 速度最快</li>
+                            </ul>
+                        </div>
+                        <div class="price-btn">
+                            <p>NT$5<span>／1k tokens</span></p>
+                            <a href="#">開始使用
+                                <span class="material-symbols-outlined">
+                                    call_made
+                                </span>
+                            </a>
+                        </div>
                     </li>
                     <li>
-                        <a href="price.html">定價</a>
+                        <div class="price-title">
+                            <h5>昊昊</h5>
+                            <ul>
+                                <li>• 中級</li>
+                            </ul>
+                        </div>
+                        <div class="price-btn">
+                            <p>NT$5<span>／1k tokens</span></p>
+                            <a href="#">開始使用
+                                <span class="material-symbols-outlined">
+                                    call_made
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="price-title">
+                            <h5>卡卡</h5>
+                            <ul>
+                                <li>• 高級</li>
+                            </ul>
+                        </div>
+                        <div class="price-btn">
+                            <p>NT$5<span>／1k tokens</span></p>
+                            <a href="#">開始使用
+                                <span class="material-symbols-outlined">
+                                    call_made
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="price-title">
+                            <h5>杰杰</h5>
+                            <ul>
+                                <li>• 最高級</li>
+                                <li>• 資訊最完善</li>
+                            </ul>
+                        </div>
+                        <div class="price-btn">
+                            <p>NT$5<span>／1k tokens</span></p>
+                            <a href="#">開始使用
+                                <span class="material-symbols-outlined">
+                                    call_made
+                                </span>
+                            </a>
+                        </div>
                     </li>
                 </ul>
-                <hr>
-                <span>AI工具王 © 2023</span>
-                <div class="m-footer">
-                    <a href="">Facebook</a>
-                    <a href="">Twitter</a>
-                    <a href="">Instagram</a>
-                </div>
+            </div>
+            <div class="price-desc">
+                <h4>使用規範</h4>
+                <ul>
+                    <li>
+                        <h5 class="h5">守法</h5>
+                        <p>請遵守相關的法規和政策，不得進行任何違法違規的活動。</p>
+                    </li>
+                    <li>
+                        <h5 class="h5">資訊安全</h5>
+                        <p>請務必保護好自己的帳號和密碼，不得將其透露給他人。</p>
+                    </li>
+                    <li>
+                        <h5 class="h5">守密</h5>
+                        <p>需對使用過程中產生的數據負責，不得擅自泄露數據。</p>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="banner">
-            <h2>用多少，<br>付多少</h2>
-            <div class="banner-desc">
-                <p>我們相信，最靈活的取用機制，才能最大化的幫助你業務的推動。</p>
-            </div>
-            <div class="banner-icon banner-icon-price">
-                <img src="img/header-icon.png" alt="motin">
-                <img src="img/header-icon.png" alt="motin">
-                <img src="img/header-icon.png" alt="motin">
-            </div>
-        </div>
-        <div class="price">
-            <h3>定價</h3>
-            <ul>
-                <li>
-                    <div class="price-title">
-                        <h4>琪琪</h4>
-                        <ul>
-                            <li>• 初級</li>
-                            <li>• 速度最快</li>
-                        </ul>
-                    </div>
-                    <div class="price-btn">
-                        <p>NT$5<span>／1k tokens</span></p>
-                        <a href="">開始使用
-                        <span class="material-symbols-outlined">
-                            call_made
-                        </span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="price-title">
-                        <h4>昊昊</h4>
-                        <ul>
-                            <li>• 中級</li>
-                        </ul>
-                    </div>
-                    <div class="price-btn">
-                        <p>NT$5<span>／1k tokens</span></p>
-                        <a href="">開始使用
-                        <span class="material-symbols-outlined">
-                            call_made
-                        </span>
-                         </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="price-title">
-                        <h4>卡卡</h4>
-                        <ul>
-                            <li>• 高級</li>
-                        </ul>
-                    </div>
-                    <div class="price-btn">
-                        <p>NT$5<span>／1k tokens</span></p>
-                        <a href="">開始使用
-                        <span class="material-symbols-outlined">
-                            call_made
-                        </span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="price-title">
-                        <h4>杰杰</h4>
-                        <ul>
-                            <li>• 最高級</li>
-                            <li>• 資訊最完善</li>
-                        </ul>
-                    </div>
-                    <div class="price-btn">
-                        <p>NT$5<span>／1k tokens</span></p>
-                        <a href="">開始使用
-                        <span class="material-symbols-outlined">
-                            call_made
-                        </span>
-                         </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="price-desc">
-            <h3>使用規範</h3>
-            <ul>
-                <li>
-                    <h4 class="h4">守法</h4>
-                    <p>請遵守相關的法規和政策，不得進行任何違法違規的活動。</p>
-                </li>
-                <li>
-                    <h4 class="h4">資訊安全</h4>
-                    <p>請務必保護好自己的帳號和密碼，不得將其透露給他人。</p>
-                </li>
-                <li>
-                    <h4 class="h4">守密</h4>
-                    <p>需對使用過程中產生的數據負責，不得擅自泄露數據。</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="bg-w">
-        <div class="tools container">
-            <p>這些超酷的應用，都來自 AI工具王</p>
-            <div class="tools-search">
-                <span class="material-symbols-outlined">
-          search
-        </span>
-                <input type="search" id="search" placeholder="輸入關鍵字搜尋">
-            </div>
-            <div class="tools-filter">
-                <div class="tools-filter-btn btn">
-                    <span>篩選</span>
+        <div class="bg-w">
+            <div class="tools container">
+                <h6>這些超酷的應用，都來自 AI工具王</h6>
+                <div class="tools-search">
                     <span class="material-symbols-outlined">
-            filter_alt
-          </span>
+                        search
+                    </span>
+                    <input type="search" id="search" placeholder="輸入關鍵字搜尋">
                 </div>
-                <div class="tools-filter-content">
+                <div class="tools-filter">
+                    <button class="tools-filter-btn btn">
+                        <span>篩選</span>
+                        <span class="material-symbols-outlined">
+                            filter_alt
+                        </span>
+                    </button>
+                    <div class="tools-filter-content">
+                        <ul>
+                            <li>
+                                <label for="filter-所有類型">
+                                    <input type="radio" checked="checked" id="filter-所有類型" class="filter-btn"
+                                        name="contact" value="所有類型">
+                                    所有類型 <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="filter-問答服務">
+                                    <input type="radio" id="filter-問答服務" class="filter-btn" name="contact" value="問答服務">
+                                    問答服務 <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="filter-虛擬客服">
+                                    <input type="radio" id="filter-虛擬客服" class="filter-btn" name="contact" value="虛擬客服">
+                                    虛擬客服 <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="filter-生活應用">
+                                    <input type="radio" id="filter-生活應用" class="filter-btn" name="contact" value="生活應用">
+                                    生活應用
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="filter-程式知識">
+                                    <input type="radio" id="filter-程式知識" class="filter-btn" name="contact" value="程式知識">
+                                    程式知識
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="filter-翻譯助手">
+                                    <input type="radio" id="filter-翻譯助手" class="filter-btn" name="contact" value="翻譯助手">
+                                    翻譯助手
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="filter-行銷文案">
+                                    <input type="radio" id="filter-行銷文案" class="filter-btn" name="contact" value="行銷文案">
+                                    行銷文案
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                     <ul>
                         <li>
-                            <label for="filter-所有類型">
-                <input type="radio" checked="checked" id="filter-所有類型" class="filter-btn" name="contact" value="所有類型">
-                所有類型 <span class="checkmark"></span>
-              </label>
+                            <label for="所有類型">
+                                <input type="radio" checked="checked" id="所有類型" class="filter-btn" name="contact"
+                                    value="所有類型">
+                                <span>所有類型</span>
+                            </label>
                         </li>
                         <li>
-                            <label for="filter-問答服務">
-                <input type="radio" id="filter-問答服務" class="filter-btn" name="contact" value="問答服務">
-                問答服務 <span class="checkmark"></span>
-              </label>
+                            <label for="問答服務">
+                                <input type="radio" id="問答服務" class="filter-btn" name="contact" value="問答服務">
+                                <span>問答服務</span>
+                            </label>
                         </li>
                         <li>
-                            <label for="filter-虛擬客服">
-                <input type="radio" id="filter-虛擬客服" class="filter-btn" name="contact" value="虛擬客服">
-                虛擬客服 <span class="checkmark"></span>
-              </label>
+                            <label for="虛擬客服">
+                                <input type="radio" id="虛擬客服" class="filter-btn" name="contact" value="虛擬客服">
+                                <span>虛擬客服</span>
+                            </label>
                         </li>
                         <li>
-                            <label for="filter-生活應用">
-                <input type="radio" id="filter-生活應用" class="filter-btn" name="contact" value="生活應用">
-                生活應用
-                <span class="checkmark"></span>
-              </label>
+                            <label for="生活應用">
+                                <input type="radio" id="生活應用" class="filter-btn" name="contact" value="生活應用">
+                                <span>生活應用</span>
+                            </label>
                         </li>
                         <li>
-                            <label for="filter-程式知識">
-                <input type="radio" id="filter-程式知識" class="filter-btn" name="contact" value="程式知識">
-                程式知識
-                <span class="checkmark"></span>
-              </label>
+                            <label for="程式知識">
+                                <input type="radio" id="程式知識" class="filter-btn" name="contact" value="程式知識">
+                                <span>程式知識</span>
+                            </label>
                         </li>
                         <li>
-                            <label for="filter-翻譯助手">
-                <input type="radio" id="filter-翻譯助手" class="filter-btn" name="contact" value="翻譯助手">
-                翻譯助手
-                <span class="checkmark"></span>
-              </label>
+                            <label for="翻譯助手">
+                                <input type="radio" id="翻譯助手" class="filter-btn" name="contact" value="翻譯助手">
+                                <span>翻譯助手</span>
+                            </label>
                         </li>
                         <li>
-                            <label for="filter-行銷文案">
-                <input type="radio" id="filter-行銷文案" class="filter-btn" name="contact" value="行銷文案">
-                行銷文案
-                <span class="checkmark"></span>
-              </label>
+                            <label for="行銷文案">
+                                <input type="radio" id="行銷文案" class="filter-btn" name="contact" value="行銷文案">
+                                <span>行銷文案</span>
+                            </label>
                         </li>
                     </ul>
+                    <button class="tools-sort-btn btn">
+                        <span id="btn-sort">由新到舊</span>
+                        <span class="material-symbols-outlined icon-expand">
+                            expand_more
+                        </span>
+                        <div class="tools-sort-content">
+                            <ul>
+                                <li id="desc">由新到舊</li>
+                                <li id="asc">由舊到新</li>
+                            </ul>
+                        </div>
+                    </button>
                 </div>
-                <ul>
-                    <li>
-                        <label for="所有類型">
-              <input type="radio" checked="checked" id="所有類型1" class="filter-btn" name="contact" value="所有類型">
-              <span>所有類型</span>
-            </label>
-                    </li>
-                    <li>
-                        <label for="問答服務">
-              <input type="radio" id="問答服務" class="filter-btn" name="contact" value="問答服務">
-              <span>問答服務</span>
-            </label>
-                    </li>
-                    <li>
-                        <label for="虛擬客服">
-              <input type="radio" id="虛擬客服" class="filter-btn" name="contact" value="虛擬客服">
-              <span>虛擬客服</span>
-            </label>
-                    </li>
-                    <li>
-                        <label for="生活應用">
-              <input type="radio" id="生活應用" class="filter-btn" name="contact" value="生活應用">
-              <span>生活應用</span>
-            </label>
-                    </li>
-                    <li>
-                        <label for="程式知識">
-              <input type="radio" id="程式知識" class="filter-btn" name="contact" value="程式知識">
-              <span>程式知識</span>
-            </label>
-                    </li>
-                    <li>
-                        <label for="翻譯助手">
-              <input type="radio" id="翻譯助手" class="filter-btn" name="contact" value="翻譯助手">
-              <span>翻譯助手</span>
-            </label>
-                    </li>
-                    <li>
-                        <label for="行銷文案">
-              <input type="radio" id="行銷文案" class="filter-btn" name="contact" value="行銷文案">
-              <span>行銷文案</span>
-            </label>
-                    </li>
+                <ul id="list" class="tools-list"></ul>
+                <ul id="pagination" class="tools-page">
                 </ul>
-                <div class="tools-sort-btn btn">
-                    <span id="btn-sort">由新到舊</span>
-                    <span class="material-symbols-outlined icon-expand">
-            expand_more
-          </span>
-                    <div class="tools-sort-content">
-                        <ul>
-                            <li id="desc">由新到舊</li>
-                            <li id="asc">由舊到新</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-            <ul id="list" class="tools-list"></ul>
-            <ul id="pagination" class="tools-page">
-            </ul>
         </div>
-    </section>
-    <section class="container">
-        <div class="qa">
-            <h3>常見問題</h3>
-            <ul id="accordion">
-                <li>
-                    <div class="qa-title">
-                        如何選擇適合的AI模型？
-                    </div>
-                    <div class="qa-content">
-                        <p>選擇適合的 AI 模型需要考慮您的應用場景、需要解決的問題、可用的資源以及預算等因素。可以通過對比不同模型的性能、準確率、速度等指標，以及與其他用戶的評價與反饋，來選擇最適合的模型。</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="qa-title">
-                        租用模型的費用是如何計算的？
-                    </div>
-                    <div class="qa-content">
-                        <p>
-                            租用模型的費用通常會根據模型的性能和使用時間等因素進行計算。具體而言，模型的性能可以根據其精度、速度、暫用資源等指標來評估；而使用時間可以根據租用時間的長短來計算，通常會按小時、天或月來計算。綜合考慮這些因素，系統會自動算出對應的租用費用。
-                        </p>
-                    </div>
+        <div class="container">
+            <div class="qa">
+                <h4>常見問題</h4>
+                <ul id="accordion">
+                    <li>
+                        <div class="qa-title">
+                            如何選擇適合的AI模型？
+                        </div>
+                        <div class="qa-content">
+                            <p>選擇適合的 AI
+                                模型需要考慮您的應用場景、需要解決的問題、可用的資源以及預算等因素。可以通過對比不同模型的性能、準確率、速度等指標，以及與其他用戶的評價與反饋，來選擇最適合的模型。
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="qa-title">
+                            租用模型的費用是如何計算的？
+                        </div>
+                        <div class="qa-content">
+                            <p>
+                                租用模型的費用通常會根據模型的性能和使用時間等因素進行計算。具體而言，模型的性能可以根據其精度、速度、暫用資源等指標來評估；而使用時間可以根據租用時間的長短來計算，通常會按小時、天或月來計算。綜合考慮這些因素，系統會自動算出對應的租用費用。
+                            </p>
+                        </div>
                     <li>
                         <div class="qa-title">
                             如何進行付款？
@@ -338,44 +341,44 @@
                             <p>如果在使用過程中遇到問題，您可以聯繫惡扶或技術支持人員進行諮詢或報告問題。您也可以。您也可以通過網站上的幫助中心或社區論壇尋找相關的解決方案和回答。</p>
                         </div>
                     </li>
+                </ul>
+            </div>
+    </main>
+    <footer class="container">
+        <div class="footer-link">
+            <ul>
+                <li>
+                    <a href="index.html">首頁</a>
+                </li>
+                <li>
+                    <a href="price.html">定價</a>
+                </li>
             </ul>
+            <a href="index.html" class="footer-link-logo">
+                <img src="img/logo.png" alt="logo">
+                <img src="img/logo-text.png" alt="AI工具王">
+            </a>
         </div>
-        <div class="footer">
-            <div class="footer-link">
-                <ul>
-                    <li>
-                        <a href="index.html">首頁</a>
-                    </li>
-                    <li>
-                        <a href="price.html">定價</a>
-                    </li>
-                </ul>
-                <a href="index.html" class="footer-link-logo">
-                    <img src="img/logo.png" alt="logo">
-                    <img src="img/logo-text.png" alt="AI工具王">
-                </a>
-            </div>
-            <div class="footer-info">
-                <span>AI工具王 © 2023</span>
-                <ul>
-                    <li>
-                        <a href="">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="">Instagram</a>
-                    </li>
-                </ul>
-                <a href="#top">Back to top
-          <span class="material-symbols-outlined">
-            arrow_upward
-          </span>
-        </a>
-            </div>
+        <div class="footer-info">
+            <span>AI工具王 © 2023</span>
+            <ul>
+                <li>
+                    <a href="#">Facebook</a>
+                </li>
+                <li>
+                    <a href="#">Twitter</a>
+                </li>
+                <li>
+                    <a href="#">Instagram</a>
+                </li>
+            </ul>
+            <a href="#top">Back to top
+                <span class="material-symbols-outlined">
+                    arrow_upward
+                </span>
+            </a>
         </div>
-    </section>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>

@@ -1,0 +1,172 @@
+.price {
+  margin-top: 160px;
+  >ul {
+      display: flex;
+      gap: 20px;
+      margin-top: 80px;
+      flex-wrap: wrap;
+      @include pad {
+          margin-top: 40px;
+      }
+      >li {
+          width: 48%;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          border: 1px solid $black80;
+          border-radius: 16px;
+          padding: 20px 32px 0 32px;
+          transition: all 0.3s ease;
+          @include mobile {
+              width: 100%;
+          }
+          &:hover {
+              border: 1px solid $white;
+          }
+      }
+  }
+  &-title {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 110px;
+      flex-grow: 1;
+      @include mobile {
+          min-height: 180px;
+      }
+      >ul {
+          margin-top: 12px;
+          color: $black20;
+      }
+  }
+  &-btn {
+      display: flex;
+      justify-content: space-between;
+      border-top: $black80 1px solid;
+      padding: 20px 0;
+      a {
+          color: $white;
+          >span {
+              font-size: 16px;
+              padding-left: 10px;
+              vertical-align: middle;
+          }
+      }
+      p {
+          font-weight: 900;
+          span:first-child {
+              color: $black60;
+              font-weight: 500;
+          }
+      }
+  }
+  @include mobile {
+      margin-top: 120px;
+  }
+  &-desc {
+      display: flex;
+      justify-content: space-between;
+      margin: 160px 0;
+      @include pad {
+          flex-direction: column;
+      }
+      @include mobile {
+          margin: 120px 0;
+      }
+      ul {
+          width: 65%;
+          @include pad {
+              margin-top: 48px;
+              width: 100%;
+          }
+      }
+      li {
+          padding: 40px 0;
+          border-bottom: $black80 1px solid;
+      }
+      li:first-child {
+          padding-top: 0;
+      }
+      h5 {
+          padding-bottom: 24px;
+          font-size: 48px;
+          @include mobile {
+              font-size: 32px;
+          }
+      }
+      p {
+          font-size: 32px;
+          line-height: 120%;
+          @include mobile {
+              font-size: 16px;
+          }
+      }
+  }
+}
+
+.qa {
+  margin: 150px 0;
+  display: flex;
+  justify-content: space-between;
+  @include pad {
+      margin: 80px 0;
+      flex-direction: column;
+  }
+  ul {
+      width: 70%;
+      @include pad {
+          width: 100%;
+      }
+  }
+  li {
+      cursor: pointer;
+      border: 1px solid $black80;
+      border-radius: 16px;
+      margin: 0 0 20px 25px;
+      transition: all 0.3s ease;
+      @include pad {
+          margin: 20px 0;
+      }
+      &:hover {
+          border-color: $white;
+      }
+      span {
+          vertical-align: middle;
+      }
+  }
+  &-title {
+      padding: 20px;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 120%;
+      @include mobile {
+          text-indent: -80px;
+          padding-left: 100px;
+      }
+  }
+  &-title:before {
+      content: 'add';
+      font-family: 'Material Symbols Outlined';
+      font-size: 25px;
+      padding: 0 25px;
+      font-weight: 400;
+      vertical-align: middle;
+  }
+  &-title.active:before {
+      content: 'remove';
+      font-family: 'Material Symbols Outlined';
+  }
+  &-content {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease;
+      p {
+          padding: 0 40px 20px 100px;
+      }
+  }
+  .active+&-content {
+      max-height: 250px;
+  }
+  li:has(.active) {
+      border-color: $white;
+  }
+}

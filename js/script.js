@@ -1,73 +1,94 @@
-$(function() {
-    // 手機版選單 
-    $(".m-menu-open").click(function() {
-        $(".m-header-menu").show();
-    });
-    $(".m-menu-close").click(function() {
-        $(".m-header-menu").hide();
-    });
+$(function () {
+  // 手機版選單
+  $(".m-menu-open").click(function () {
+    $(".m-header-menu").animate({ left: "0px" }, "fast");
+    $("body").css("overflow", "hidden");
+  });
+  $(".m-menu-close").click(function () {
+    $(".m-header-menu").animate({ left: "500px" }, "fast");
+    $("body").css("overflow", "visible");
+  });
 
-    // 手機版swiper 
-    const swiper = new Swiper(".swiper", {
-        loop: true, //loop
-        spaceBetween: 12,
-        // autoplay: {
-        //   delay: 2000,
-        // },
-        pagination: {
-            el: ".swiper-pagination",
-        },
-    });
+  // 手機版swiper
+  const swiper = new Swiper(".swiper", {
+    loop: false, //loop
+    slidesPerView: 1,
+    spaceBetween: 24,
+    autoplay: {
+      delay: 5000,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      768: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 
-    // 篩選、排序按鈕 
-    $(".tools-filter-btn").click(function() {
-        $(".tools-filter-content").toggle();
-        $(".tools-sort-content").hide();
-        $(".tools-filter-btn").toggleClass("border");
-        $(".tools-sort-btn").removeClass("border");
-    });
+  // 篩選、排序按鈕
+  $(".tools-filter-btn").click(function () {
+    $(".tools-filter-content").toggle();
+    $(".tools-sort-content").hide();
+    $(".tools-filter-btn").toggleClass("border");
+    $(".tools-sort-btn").removeClass("border");
+  });
 
-    $(".tools-sort-btn").click(function() {
-        $(".tools-sort-content").toggle();
-        $(".tools-filter-content").hide();
-        $(".tools-sort-btn").toggleClass("border");
-        $(".tools-filter-btn").removeClass("border");
-    });
-    // $(document).on("click", function (event) {
-    //   let $trigger = $(".tools-filter");
-    //   if ($trigger !== event.target && !$trigger.has(event.target).length) {
-    //     $(".tools-filter-content").hide();
-    //   }
-    // });
+  $(".tools-sort-btn").click(function () {
+    $(".tools-sort-content").toggle();
+    $(".tools-filter-content").hide();
+    $(".tools-sort-btn").toggleClass("border");
+    $(".tools-filter-btn").removeClass("border");
+  });
+  // $(document).on("click", function (event) {
+  //   let $trigger = $(".tools-filter");
+  //   if ($trigger !== event.target && !$trigger.has(event.target).length) {
+  //     $(".tools-filter-content").hide();
+  //   }
+  // });
 
-    $(".tools-filter-content li").click(function() {
-        $(".tools-filter-content").hide();
-        $(".tools-filter-btn").removeClass("border");
-    });
+  $(".tools-filter-content li").click(function () {
+    $(".tools-filter-content").hide();
+    $(".tools-filter-btn").removeClass("border");
+  });
 
-    $(document).on("click", function(event) {
-        if (!$(event.target).closest(".tools-filter").length) {
-            $(".tools-filter-content").hide();
-            $(".tools-sort-content").hide();
-            $(".tools-filter-btn").removeClass("border");
-            $(".tools-sort-btn").removeClass("border");
-        }
-    });
-
-    // 常見問題
-    let title = $(".qa-title");
-    for (let i = 0; i < title.length; i++) {
-        title[i].onclick = function(e) {
-            let clickedTitle = e.currentTarget;
-            if ($(".active").length && $(".active")[0] !== clickedTitle) {
-                // $(".active")[0].classList.remove("active");
-            }
-            clickedTitle.classList.toggle("active");
-        };
+  $(document).on("click", function (event) {
+    if (!$(event.target).closest(".tools-filter").length) {
+      $(".tools-filter-content").hide();
+      $(".tools-sort-content").hide();
+      $(".tools-filter-btn").removeClass("border");
+      $(".tools-sort-btn").removeClass("border");
     }
-    $(".qa-content").click(function() {
-        $(".qa-title").removeClass("active");
-    });
+  });
+
+  // 常見問題
+  let title = $(".qa-title");
+  for (let i = 0; i < title.length; i++) {
+    title[i].onclick = function (e) {
+      let clickedTitle = e.currentTarget;
+      if ($(".active").length && $(".active")[0] !== clickedTitle) {
+        // $(".active")[0].classList.remove("active");
+      }
+      clickedTitle.classList.toggle("active");
+    };
+  }
+  $(".qa-content").click(function () {
+    $(".qa-title").removeClass("active");
+  });
+  // $(".accordion > li > a").click(function (event) {
+  //   event.preventDefault();
+  //   //點擊 .accordion 的第一層 a 連結，找到父層元素中的同階層內的子層 ul 元素，並讓其向上滑動
+  //   $(this).parent().siblings().find("ul").slideUp();
+  //   //點擊 .accordion 的第一層 a 連結，找到父層元素的子層 ul 元素，切換 Slide 效果。
+  //   $(this).parent().find("ul").slideToggle();
+  // });
 });
 
 // 資料串接
@@ -76,17 +97,17 @@ const list = document.querySelector("#list");
 const pagination = document.querySelector("#pagination");
 
 const data = {
-    type: "",
-    sort: 0,
-    page: 1,
-    search: "",
+  type: "",
+  sort: 0,
+  page: 1,
+  search: "",
 };
 
 let worksData = [];
 let pagesData = {};
 
 function getData({ type, sort, page, search }) {
-    const apiUrl = `${apiPath}/api/v1/works?sort=${sort}&page=${page}&${
+  const apiUrl = `${apiPath}/api/v1/works?sort=${sort}&page=${page}&${
     type ? `type=${type}&` : ""
   }${search ? `search=${search}` : ""}`;
   axios.get(apiUrl).then((res) => {
@@ -110,7 +131,7 @@ function renderWorks() {
       <img src="${item.imageUrl}" alt="${item.title}">
     </a>
     <div class="tools-title">
-      <h5>${item.title}</h5>
+      <h3>${item.title}</h3>
       <p>${item.description}</p>
     </div>
     <div class="tools-ai">
