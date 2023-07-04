@@ -2,11 +2,11 @@ $(function () {
   // 手機版選單
   $(".m-menu-open").click(function () {
     $(".m-header-menu").animate({ left: "0px" }, "fast");
-    $("body").css("overflow", "hidden");
+    $("body").css("overflow-y", "hidden");
   });
   $(".m-menu-close").click(function () {
     $(".m-header-menu").animate({ left: "500px" }, "fast");
-    $("body").css("overflow", "visible");
+    $("body").css("overflow-y", "visible");
   });
 
   // 手機版swiper

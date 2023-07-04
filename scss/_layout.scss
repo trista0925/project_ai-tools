@@ -54,8 +54,8 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             top: 0;
             left: 500px;
             background: $black100;
@@ -77,18 +77,21 @@ header {
                     text-align: center;
                 }
             }
-            > span {
-                display: block;
-                font-weight: 700;
-                border-top: #fff 1px solid;
-                padding-top: 48px;
-            }
             .m-footer {
-                display: flex;
-                align-items: end;
-                gap: 20px;
+                border-top: #fff 1px solid;
+                padding: 20px 0;
+                span {
+                    font-weight: 700;
+                    display: block;
+                    margin: 12px 0;
+                }
+                ul{
+                    display: flex;
+                    align-items: end;
+                    gap: 20px;
+                }
                 li{
-                    margin-bottom: 48px;
+                    margin: 24px 0;
                 }
                 a {
                     color: $white;
