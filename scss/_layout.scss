@@ -423,6 +423,11 @@ header {
             }
         }
     }
+    &-nodata {
+        margin: 100px auto;
+        color: $black20;
+        font-size: 36px;
+    }
 }
 
 .footer-link {

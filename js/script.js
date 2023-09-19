@@ -148,8 +148,11 @@ function renderWorks() {
     </div>
   </li>`;
   });
-
-  list.innerHTML = works;
+  if (worksData.length == 0) {
+    list.innerHTML = `<p class="tools-nodata">無相關資料</p>`;
+  } else {
+    list.innerHTML = works;
+  }
 }
 
 // 切換分頁
@@ -165,7 +168,14 @@ function changePage(pagesData) {
 
       if (!pageId) {
         data.page = Number(pagesData.current_page) + 1;
-        e.preventDefault();
+      }
+
+      if (!pageId) {
+        if (e.target.classList.contains("pre")) {
+          data.page = Number(pagesData.current_page) - 1;
+        } else if (e.target.classList.contains("next")) {
+          data.page = Number(pagesData.current_page) + 1;
+        }
       }
 
       getData(data);
@@ -177,6 +187,16 @@ function changePage(pagesData) {
 function renderPages() {
   let pageStr = "";
 
+  if (pagesData.has_pre) {
+    pageStr += /*html*/ `<li class="page-item">
+    <a class="page-link pre" href="#">
+      <span class="material-symbols-outlined">
+        chevron_left
+      </span>
+    </a>
+  </li>`;
+  }
+
   for (let i = 1; i <= pagesData.total_pages; i += 1) {
     pageStr += /*html*/ `<li ${pagesData.current_page == i ? "active" : ""} >
       <a class="page-link ${
@@ -186,12 +206,12 @@ function renderPages() {
   }
 
   if (pagesData.has_next) {
-    pageStr += /*html*/ `<li>
-    <a class="page-link" href="#">
-    <span class="material-symbols-outlined">
-    chevron_right
-    </span>
-    </a>
+    pageStr += /*html*/ `<li class="page-item">
+      <a class="page-link next" href="#">
+        <span class="material-symbols-outlined">
+          chevron_right
+        </span>
+      </a>
     </li>`;
   }
   pagination.innerHTML = pageStr;
